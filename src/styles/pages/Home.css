@@ -1,0 +1,86 @@
+.elevate .container {
+    display: flex;
+    align-items: center;
+}
+
+.elevate .container .left {
+    top: 0;
+    display: inline-block;
+    width: 50%;
+    padding: 20px;
+}
+
+.elevate .container .left h1 {
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+.elevate .container .left p {
+    margin-top: 30px;
+    color: var(--noActiveLinkText);
+
+}
+
+
+.elevate .container .right {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    /* background-color: blue; */
+}
+
+.elevate .container .right img {
+    display: inline-block;
+    width: 100%;
+    right: 0;
+    top: 0;
+}
+
+.elevate .buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.elevate .buttons button {
+    padding: 14px 28px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.elevate .buttons .primary {
+    background: #FFD400;
+    color: #262626;
+    font-weight: 600;
+    border-radius: 100px;
+}
+
+.elevate .buttons .secondary {
+    background: none;
+}
+
+.elevate .cards {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.elevate .card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.elevate .card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.elevate .card p {
+    font-size: 16px;
+    color: #777;
+}

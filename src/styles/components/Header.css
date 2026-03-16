@@ -1,0 +1,73 @@
+header .top {
+    background-color: #1A1A1A;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .top p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+}
+
+header .bottom {
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+}
+
+header .bottom .left {
+    flex: 1;
+    
+}
+
+header .bottom .center {
+    flex: 0;
+    text-align: center;
+}
+
+header .bottom .right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+header .bottom .right .cart {
+    background-color: gold;
+    padding: 15px;
+    border-radius: 120px;
+}
+
+header .bottom .right p {
+    font-size: 16px;
+}
+
+
+header .bottom a {
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    color: var(--noActiveLinkText);
+}
+
+header .bottom li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+
+}
+
+header .bottom li .active {
+    background-color: var(--activeLinkBg);
+    color: var(--activeLinkText);
+
+}
