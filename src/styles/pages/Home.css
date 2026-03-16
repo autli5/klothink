@@ -122,6 +122,10 @@
 .categories ul li {
     list-style-type: none;
     display: inline-block;
+}
+
+.categories ul li a{
+    text-decoration: none;
     padding: 10px 15px;
     color: #98989A;
     font-size: 18px;
@@ -132,11 +136,14 @@
     display: inline-block;
 }
 
-.categories .spisok ul li {
+.categories .spisok ul a {
     text-transform: uppercase;
+    text-decoration: none;
+    margin-right: 15px;
+    color: #98989A;
 }
 
-.categories .spisok ul li.active {
+.categories .spisok ul a.active {
     color: #1A1A1A;
 }
 
@@ -145,8 +152,109 @@
     top: 0;
 }
 
-.categories .vibor ul li.active {
+
+.categories .vibor ul .active {
     background-color: #1A1A1A;
     border-radius: 120px;
     color: aliceblue;
+}
+
+.categories .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.categories .cards .card {
+    width: 100%;
+}
+
+.categories .cards .card .top {
+    position: relative;
+}
+
+.categories .cards .cart {
+    position: absolute;
+    background-color: #FFD400;
+    display: inline-block;
+    padding: 20px;
+    right: 0;
+    bottom: 0;
+    border-radius: 100px;
+}
+
+.categories .cards .card .bottom {
+    /* background-color: aliceblue; */
+    padding: 0 15px;
+}
+
+.categories .cards .card .bottom h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.categories .cards .card .bottom  p {
+    font-size: 18px;
+}
+
+.experience .container .top .text {
+    margin: 60px 0;
+}
+
+.experience .container .top .text h1 {
+    text-transform: uppercase;
+}
+
+.experience .container .top .text p {
+    width: 60%;
+    margin-top: 15px;
+}
+
+
+.experience .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.experience .card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    border: 1px solid #eee;
+    transition: 0.25s;
+}
+
+.experience .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.experience .card .top {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.experience .card .top .image {
+    padding: 5px;
+    background-color: #FFD400;
+    border-radius: 120px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+}
+
+.experience .card .top h1 {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.experience .card .bottom p {
+    color: #777;
+    font-size: 15px;
+    line-height: 1.5;
 }
