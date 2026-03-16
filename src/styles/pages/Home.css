@@ -84,3 +84,69 @@
     font-size: 16px;
     color: #777;
 }
+
+.fashion .container .text-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fashion .container .text-top .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.fashion .container .text-top h1 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.fashion .container .text-top p {
+    width: 60%;
+}
+
+.fashion .container .text-top a {
+    white-space: nowrap;
+    text-decoration: none;
+    background: #FFD400;
+    padding: 10px 15px;
+    border-radius: 120px;
+    color: #262626;
+    font-weight: 600;
+}
+
+.categories {
+    margin-top: 60px;
+}
+
+.categories ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 15px;
+    color: #98989A;
+    font-size: 18px;
+    
+}
+
+.categories .spisok {
+    display: inline-block;
+}
+
+.categories .spisok ul li {
+    text-transform: uppercase;
+}
+
+.categories .spisok ul li.active {
+    color: #1A1A1A;
+}
+
+.categories .vibor {
+    float: right;
+    top: 0;
+}
+
+.categories .vibor ul li.active {
+    background-color: #1A1A1A;
+    border-radius: 120px;
+    color: aliceblue;
+}
