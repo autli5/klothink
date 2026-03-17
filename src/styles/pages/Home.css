@@ -160,14 +160,28 @@
 }
 
 .categories .cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 30px;
     margin-top: 60px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
 }
 
+.categories .cards::-webkit-scrollbar {
+    height: 8px;
+}
+
+.categories .cards::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 10px;
+}
+
+/* чтобы карточки не сжимались */
 .categories .cards .card {
-    width: 100%;
+    min-width: 300px;
+    flex-shrink: 0;
+    margin-bottom: 20px;
 }
 
 .categories .cards .card .top {
@@ -250,7 +264,6 @@
 
 .experience .card .top h1 {
     font-size: 18px;
-    text-transform: uppercase;
 }
 
 .experience .card .bottom p {
