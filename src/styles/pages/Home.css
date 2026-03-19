@@ -4,7 +4,6 @@
 }
 
 .elevate .container .left {
-    top: 0;
     display: inline-block;
     width: 50%;
     padding: 20px;
@@ -18,22 +17,16 @@
 .elevate .container .left p {
     margin-top: 30px;
     color: var(--noActiveLinkText);
-
 }
-
 
 .elevate .container .right {
     position: relative;
     display: inline-block;
     width: 50%;
-    /* background-color: blue; */
 }
 
 .elevate .container .right img {
-    display: inline-block;
     width: 100%;
-    right: 0;
-    top: 0;
 }
 
 .elevate .buttons {
@@ -85,6 +78,8 @@
     color: #777;
 }
 
+/* ================== FASHION ================== */
+
 .fashion .container .text-top {
     display: flex;
     justify-content: space-between;
@@ -115,21 +110,35 @@
     font-weight: 600;
 }
 
+/* ================== CATEGORIES ================== */
+
 .categories {
     margin-top: 60px;
 }
 
+.cards-wrapper {
+    position: relative;       /* для кнопок overlay */
+    width: 100%;              /* занимает всю ширину */
+    display: flex;
+    align-items: center;
+    gap: 0;                   /* карточки и кнопки не разделяем */
+}
+
+.categories {
+    position: relative;
+}
+
+/* списки */
 .categories ul li {
     list-style-type: none;
     display: inline-block;
 }
 
-.categories ul li a{
+.categories ul li a {
     text-decoration: none;
     padding: 10px 15px;
     color: #98989A;
     font-size: 18px;
-    
 }
 
 .categories .spisok {
@@ -138,9 +147,7 @@
 
 .categories .spisok ul a {
     text-transform: uppercase;
-    text-decoration: none;
     margin-right: 15px;
-    color: #98989A;
 }
 
 .categories .spisok ul a.active {
@@ -149,35 +156,28 @@
 
 .categories .vibor {
     float: right;
-    top: 0;
 }
 
-
-.categories .vibor ul .active {
-    background-color: #1A1A1A;
-    border-radius: 120px;
-    color: aliceblue;
-}
-
+/* Скролл и карточки */
 .categories .cards {
     display: flex;
     gap: 30px;
-    margin-top: 60px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    padding-bottom: 10px;
+    padding: 10px 0;
+    flex: 1;                  /* 🔑 занимает всё доступное место внутри wrapper */
 }
 
+/* scrollbar */
 .categories .cards::-webkit-scrollbar {
     height: 8px;
 }
-
 .categories .cards::-webkit-scrollbar-thumb {
     background: #262626;
     border-radius: 10px;
 }
 
-/* чтобы карточки не сжимались */
+/* карточки */
 .categories .cards .card {
     min-width: 300px;
     flex-shrink: 0;
@@ -188,10 +188,32 @@
     position: relative;
 }
 
+/* кнопки overlay */
+.scroll-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;             /* кнопки поверх wrapper */
+    display: flex;
+    justify-content: space-between; /* слева/справа */
+    padding: 0 10px;
+    pointer-events: none;    /* чтобы скролл под кнопками работал */
+    z-index: 10;
+}
+
+.scroll-buttons button {
+    pointer-events: all;     /* кнопки кликабельны */
+    background: #FFD400;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
 .categories .cards .cart {
     position: absolute;
     background-color: #FFD400;
-    display: inline-block;
     padding: 20px;
     right: 0;
     bottom: 0;
@@ -199,7 +221,6 @@
 }
 
 .categories .cards .card .bottom {
-    /* background-color: aliceblue; */
     padding: 0 15px;
 }
 
@@ -208,29 +229,24 @@
     margin-bottom: 10px;
 }
 
-.categories .cards .card .bottom  p {
+.categories .cards .card .bottom p {
     font-size: 18px;
 }
 
-.experience .container .top .text {
+/* ================== EXPERIENCE ================== */
+
+.experience .container .top {
     margin: 60px 0;
 }
 
-.experience .container .top .text h1 {
+.experience .container .top h1 {
     text-transform: uppercase;
 }
-
-.experience .container .top .text p {
-    width: 60%;
-    margin-top: 15px;
-}
-
 
 .experience .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-top: 40px;
 }
 
 .experience .card {
