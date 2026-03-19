@@ -1,3 +1,104 @@
-footer {
-    background-color: aqua;
+.footer {
+    background: #f5f5f5;
+    padding-top: 40px;
+    margin-top: 120px;
+    font-family: sans-serif;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Верх */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Лево */
+.footer-left {
+    max-width: 250px;
+}
+
+.logo-box {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+/* Подписка */
+.subscribe {
+    display: flex;
+    gap: 10px;
+}
+
+.subscribe input {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    width: 240px;
+}
+
+.subscribe button {
+    background: #ffc107;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Колонки */
+.footer-links {
+    display: flex;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.footer-links h4 {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-links a {
+    display: block;
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 6px;
+    text-decoration: none;
+}
+
+/* Низ */
+.footer-bottom {
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Terms */
+.footer-terms a {
+    margin-right: 15px;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Соц иконки (заглушка) */
+.footer-socials span {
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+/* Копирайт */
+.footer-copy {
+    font-size: 12px;
+    color: #888;
 }
