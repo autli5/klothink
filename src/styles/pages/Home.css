@@ -122,10 +122,12 @@
     display: flex;
     align-items: center;
     gap: 0;                   /* карточки и кнопки не разделяем */
+    margin-top: 30px;
 }
 
 .categories {
     position: relative;
+
 }
 
 /* списки */
@@ -157,6 +159,13 @@
 .categories .vibor {
     float: right;
 }
+
+.categories .vibor ul li a.active {
+    background-color: #1A1A1A;
+    border-radius: 120px;
+    color:#eee;
+}
+
 
 /* Скролл и карточки */
 .categories .cards {

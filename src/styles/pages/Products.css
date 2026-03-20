@@ -1,0 +1,101 @@
+.productDiscover {
+    padding: 60px 0;
+}
+
+/* TOP BLOCK */
+.topText {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+/* LEFT */
+.left {
+    width: 50%;
+}
+
+.titleRow {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.titleRow h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.left p {
+    margin-top: 15px;
+    color: #777;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* RIGHT */
+.right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.infoCards {
+    display: flex;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+}
+
+/* CARD */
+.infoCard {
+    padding: 10px;
+    min-width: 150px;
+}
+
+.infoCard h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.infoCard p {
+    font-size: 16px;
+    color: gray;
+}
+
+/* FILTERS */
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filters button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 16px;
+    text-transform: uppercase;
+
+    border-radius: 20px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.filters button img {
+    width: 16px;
+    height: 16px;
+}
+
+.filters button.active {
+    background: #f5c518;
+    font-weight: 600;
+}
