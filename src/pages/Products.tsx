@@ -1,11 +1,13 @@
 import "../styles/pages/Products.css"
+import { useState } from "react"
 
 import mensWear from "../assets/mensWear.svg"
 import womensWear from "../assets/womensWear.svg"
 import kidsWear from "../assets/kidsWear.svg"
 
-
 export default function Products() {
+    const [activeFilter, setActiveFilter] = useState("all")
+
     return (
         <div className="productDiscover">
             <div className="container">
@@ -14,7 +16,7 @@ export default function Products() {
 
                     <div className="left">
                         <div className="titleRow">
-                            <h1>Discower now</h1>
+                            <h1>Discover now</h1>
                         </div>
 
                         <p>
@@ -48,10 +50,36 @@ export default function Products() {
                 </div>
 
                 <div className="filters">
-                    <button>All</button>
-                    <button className="active"><img src={mensWear} alt="" />Men's wear</button>
-                    <button><img src={womensWear} alt="" />Women's wear</button>
-                    <button><img src={kidsWear} alt="" />Kid's wear</button>
+                    <button
+                        className={`filterBtn ${activeFilter === "all" ? "active" : ""}`}
+                        onClick={() => setActiveFilter("all")}
+                    >
+                        All
+                    </button>
+
+                    <button
+                        className={`filterBtn ${activeFilter === "mens" ? "active" : ""}`}
+                        onClick={() => setActiveFilter("mens")}
+                    >
+                        <img src={mensWear} alt="" />
+                        Men's wear
+                    </button>
+
+                    <button
+                        className={`filterBtn ${activeFilter === "womens" ? "active" : ""}`}
+                        onClick={() => setActiveFilter("womens")}
+                    >
+                        <img src={womensWear} alt="" />
+                        Women's wear
+                    </button>
+
+                    <button
+                        className={`filterBtn ${activeFilter === "kids" ? "active" : ""}`}
+                        onClick={() => setActiveFilter("kids")}
+                    >
+                        <img src={kidsWear} alt="" />
+                        Kid's wear
+                    </button>
                 </div>
 
             </div>

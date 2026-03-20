@@ -73,7 +73,7 @@
     gap: 10px;
 }
 
-.filters button {
+.filterBtn {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -82,20 +82,25 @@
     text-transform: uppercase;
 
     border-radius: 20px;
-    border: none;
     background: #eee;
-    cursor: pointer;
-
+    text-decoration: none;
+    color: black;
+    border: none;
     font-size: 12px;
     transition: 0.2s;
 }
 
-.filters button img {
+.filterBtn:hover {
+    cursor: pointer;
+}
+
+.filterBtn img {
     width: 16px;
     height: 16px;
 }
 
-.filters button.active {
+/* 🔥 вот это теперь работает */
+.filterBtn.active {
     background: #f5c518;
     font-weight: 600;
 }
