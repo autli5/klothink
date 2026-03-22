@@ -104,3 +104,146 @@
     background: #f5c518;
     font-weight: 600;
 }
+
+
+/* ================== CATEGORIES ================== */
+
+.categories {
+    margin-top: 60px;
+}
+
+.cards-wrapper {
+    position: relative;       /* для кнопок overlay */
+    width: 100%;              /* занимает всю ширину */
+    display: flex;
+    align-items: center;
+    gap: 0;                   /* карточки и кнопки не разделяем */
+    margin-top: 30px;
+}
+
+.categories {
+    position: relative;
+
+}
+
+/* списки */
+.categories ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.categories ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #98989A;
+    font-size: 18px;
+}
+
+.categories .spisok {
+    display: inline-block;
+}
+
+.categories .spisok ul a {
+    text-transform: uppercase;
+    margin-right: 15px;
+}
+
+.categories .spisok ul a.active {
+    color: #1A1A1A;
+}
+
+.categories .vibor {
+    float: right;
+}
+
+.categories .vibor ul li a.active {
+    background-color: #1A1A1A;
+    border-radius: 120px;
+    color:#eee;
+}
+
+
+/* Скролл и карточки */
+
+.categories h1 {
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.categories p {
+    color: #656567;
+}
+
+.categories .cards {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    flex: 1;                  /* 🔑 занимает всё доступное место внутри wrapper */
+}
+
+/* scrollbar */
+.categories .cards::-webkit-scrollbar {
+    height: 8px;
+}
+.categories .cards::-webkit-scrollbar-thumb {
+    background: #262626;
+    border-radius: 10px;
+}
+
+/* карточки */
+.categories .cards .card {
+    min-width: 300px;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+}
+
+.categories .cards .card .top {
+    position: relative;
+}
+
+/* кнопки overlay */
+.scroll-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;             /* кнопки поверх wrapper */
+    display: flex;
+    justify-content: space-between; /* слева/справа */
+    padding: 0 10px;
+    pointer-events: none;    /* чтобы скролл под кнопками работал */
+    z-index: 10;
+}
+
+.scroll-buttons button {
+    pointer-events: all;     /* кнопки кликабельны */
+    background: #FFD400;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.categories .cards .cart {
+    position: absolute;
+    background-color: #FFD400;
+    padding: 20px;
+    right: 0;
+    bottom: 0;
+    border-radius: 100px;
+}
+
+.categories .cards .card .bottom {
+    padding: 0 15px;
+}
+
+.categories .cards .card .bottom h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.categories .cards .card .bottom p {
+    font-size: 18px;
+}
